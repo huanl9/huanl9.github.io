@@ -4,13 +4,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Luke Huang</title>
-
-  <!-- Better link previews -->
-  <meta name="description" content="Luke Huang — New Grad Data Analyst (Toronto). Python/R/SQL, web scraping & automation, Power BI/Tableau." />
-  <meta property="og:title" content="Luke Huang — Resume" />
-  <meta property="og:description" content="New Grad Data Analyst • Python/R/SQL • Power BI/Tableau • Web scraping & automation" />
-  <meta property="og:type" content="website" />
-
   <style>
     body {
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -19,45 +12,54 @@
       padding: 0 16px;
       line-height: 1.55;
     }
-    h1 { margin: 0 0 6px; letter-spacing: -0.3px; }
+    h1 { margin: 0 0 6px; }
     .sub { color: #444; margin: 0 0 14px; }
+
     .btns a {
       display: inline-block;
       margin: 10px 10px 0 0;
       padding: 10px 14px;
       border: 1px solid #111;
-      border-radius: 12px;
+      border-radius: 10px;
       text-decoration: none;
       color: #111;
     }
     .btns a:hover { opacity: 0.82; }
-    .card {
+
+    .wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
       margin-top: 18px;
+    }
+
+    /* Force order: content first, preview last (phone + desktop) */
+    .info { order: 1; }
+    .preview { order: 2; }
+
+    .card {
       padding: 16px;
       border: 1px solid #ddd;
-      border-radius: 16px;
+      border-radius: 14px;
     }
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
-    }
-    iframe {
+
+    .preview iframe {
       width: 100%;
       height: 780px;
       border: 1px solid #ddd;
-      border-radius: 16px;
+      border-radius: 14px;
     }
+
+    /* Optional: on wide screens you can keep it single-column but cleaner spacing */
     @media (min-width: 860px) {
-      .grid { grid-template-columns: 1.05fr 0.95fr; }
-      iframe { height: 860px; }
+      .preview iframe { height: 900px; }
     }
   </style>
 </head>
 
 <body>
   <h1>Luke Huang</h1>
-  <p class="sub">New Grad Data Analyst • Toronto, Canada</p>
+  <p class="sub">New Grad Data Analyst • Toronto, ON</p>
 
   <div class="btns">
     <a href="LukeHuangResume.pdf" target="_blank" rel="noopener noreferrer">View Resume (PDF)</a>
@@ -67,40 +69,32 @@
     <a href="mailto:lukehuang526@gmail.com">Email</a>
   </div>
 
-  <div class="grid">
-    <div class="card">
+  <div class="wrap">
+    <div class="info card">
       <h2>About</h2>
       <p>
-        Data Analyst with a foundation in mathematics, computer science, and statistical modeling.
-        Experienced with Python/R/SQL, data cleaning, web scraping & automation, and building dashboards/visualizations.
+        Statistics student with experience in Python/R/SQL, data cleaning, web scraping & automation,
+        and dashboards/visualizations. Interested in analytics and product insights.
       </p>
 
       <h2>Highlights</h2>
       <ul>
-        <li><b>Python (Selenium)</b>, <b>R</b>, <b>SQL</b>, Excel</li>
-        <li><b>Power BI</b> / Tableau</li>
+        <li>Python (Selenium, pandas), R, SQL, Excel</li>
+        <li>Power BI / Tableau</li>
         <li>
-          Project: <a href="https://github.com/huanl9/Multi_brand_filter_scraper" target="_blank" rel="noopener noreferrer">
+          Project:
+          <a href="https://github.com/huanl9/Multi_brand_filter_scraper" target="_blank" rel="noopener noreferrer">
             Multi-brand filter scraper
           </a>
         </li>
       </ul>
-
-      <h2>Contact</h2>
-      <ul>
-        <li>Email: <a href="mailto:lukehuang526@gmail.com">lukehuang526@gmail.com</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/lukeziyuanhuang/" target="_blank" rel="noopener noreferrer">/in/lukeziyuanhuang</a></li>
-      </ul>
     </div>
 
-    <div>
-      <h2 style="margin: 18px 0 10px;">Preview</h2>
+    <!-- Preview ALWAYS last -->
+    <div class="preview">
+      <h2 style="margin: 0 0 10px;">Preview</h2>
       <iframe src="LukeHuangResume.pdf" title="Luke Huang Resume PDF"></iframe>
     </div>
   </div>
-
-  <p style="color:#555; margin-top:18px;">
-    Tip: Keep the PDF named <b>LukeHuangResume.pdf</b> to avoid broken links on GitHub Pages.
-  </p>
 </body>
 </html>
