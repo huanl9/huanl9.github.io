@@ -1,41 +1,106 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Name — Resume</title>
+  <title>Luke Huang</title>
+
+  <!-- Better link previews -->
+  <meta name="description" content="Luke Huang — New Grad Data Analyst (Toronto). Python/R/SQL, web scraping & automation, Power BI/Tableau." />
+  <meta property="og:title" content="Luke Huang — Resume" />
+  <meta property="og:description" content="New Grad Data Analyst • Python/R/SQL • Power BI/Tableau • Web scraping & automation" />
+  <meta property="og:type" content="website" />
+
   <style>
-    body { font-family: Arial, sans-serif; max-width: 820px; margin: 40px auto; padding: 0 16px; line-height: 1.5; }
-    h1 { margin-bottom: 6px; }
-    .sub { color: #444; margin-top: 0; }
-    .btns a { display: inline-block; margin: 10px 10px 0 0; padding: 10px 14px; border: 1px solid #111; border-radius: 10px; text-decoration: none; color: #111; }
-    .btns a:hover { opacity: 0.8; }
-    .card { margin-top: 18px; padding: 16px; border: 1px solid #ddd; border-radius: 14px; }
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      max-width: 860px;
+      margin: 40px auto;
+      padding: 0 16px;
+      line-height: 1.55;
+    }
+    h1 { margin: 0 0 6px; letter-spacing: -0.3px; }
+    .sub { color: #444; margin: 0 0 14px; }
+    .btns a {
+      display: inline-block;
+      margin: 10px 10px 0 0;
+      padding: 10px 14px;
+      border: 1px solid #111;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #111;
+    }
+    .btns a:hover { opacity: 0.82; }
+    .card {
+      margin-top: 18px;
+      padding: 16px;
+      border: 1px solid #ddd;
+      border-radius: 16px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    iframe {
+      width: 100%;
+      height: 780px;
+      border: 1px solid #ddd;
+      border-radius: 16px;
+    }
+    @media (min-width: 860px) {
+      .grid { grid-template-columns: 1.05fr 0.95fr; }
+      iframe { height: 860px; }
+    }
   </style>
 </head>
+
 <body>
-  <h1>Your Name</h1>
+  <h1>Luke Huang</h1>
   <p class="sub">New Grad Data Analyst • Toronto, ON</p>
 
   <div class="btns">
-    <a href="LukeHuangResume.pdf" target="_blank">View Resume (PDF)</a>
-    <a href="LukeHuangResume.pdf" download>Download Resume</a>
-    <a href="https://www.linkedin.com/in/lukeziyuanhuang/" target="_blank">LinkedIn</a>
+    <a href="resume.pdf" target="_blank" rel="noopener noreferrer">View Resume (PDF)</a>
+    <a href="resume.pdf" download>Download Resume</a>
+    <a href="https://www.linkedin.com/in/lukeziyuanhuang/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="https://github.com/huanl9" target="_blank" rel="noopener noreferrer">GitHub</a>
     <a href="mailto:lukehuang526@gmail.com">Email</a>
   </div>
 
-  <div class="card">
-    <h2>About</h2>
-    <p>
-      2–3 lines about you. (Example: Statistics student with project experience in Python/SQL/Tableau, interested in analytics and product insights.)
-    </p>
+  <div class="grid">
+    <div class="card">
+      <h2>About</h2>
+      <p>
+        Data Analyst with a foundation in mathematics, computer science, and statistical modeling.
+        Experienced with Python/R/SQL, data cleaning, web scraping & automation, and building dashboards/visualizations.
+      </p>
 
-    <h2>Highlights</h2>
-    <ul>
-      <li>Python (Pandas/NumPy), SQL, Excel</li>
-      <li>Power BI / Tableau</li>
-      <li>https://github.com/huanl9/Multi_brand_filter_scraper</li>
-    </ul>
+      <h2>Highlights</h2>
+      <ul>
+        <li><b>Python (Selenium, pandas)</b>, <b>R</b>, <b>SQL</b>, Excel</li>
+        <li><b>Power BI</b> / Tableau, ggplot</li>
+        <li>
+          Project: <a href="https://github.com/huanl9/Multi_brand_filter_scraper" target="_blank" rel="noopener noreferrer">
+            Multi-brand filter scraper
+          </a>
+        </li>
+      </ul>
+
+      <h2>Contact</h2>
+      <ul>
+        <li>Email: <a href="mailto:lukehuang526@gmail.com">lukehuang526@gmail.com</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/lukeziyuanhuang/" target="_blank" rel="noopener noreferrer">/in/lukeziyuanhuang</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 style="margin: 18px 0 10px;">Preview</h2>
+      <iframe src="resume.pdf" title="Luke Huang Resume PDF"></iframe>
+    </div>
   </div>
+
+  <p style="color:#555; margin-top:18px;">
+    Tip: Keep the PDF named <b>resume.pdf</b> to avoid broken links on GitHub Pages.
+  </p>
 </body>
 </html>
