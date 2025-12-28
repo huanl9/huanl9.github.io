@@ -43,17 +43,18 @@
       border-radius: 14px;
     }
 
-    .preview iframe {
+    /* PDF.js rendered pages */
+    .pdfjs canvas {
       width: 100%;
-      height: 780px;
+      height: auto;
+      display: block;
+      margin: 0 0 12px 0;
       border: 1px solid #ddd;
       border-radius: 14px;
     }
 
-    /* Optional: on wide screens you can keep it single-column but cleaner spacing */
-    @media (min-width: 860px) {
-      .preview iframe { height: 900px; }
-    }
+    /* Optional: little spacing for preview header */
+    .preview h2 { margin: 0 0 10px; }
   </style>
 </head>
 
@@ -93,9 +94,61 @@
 
     <!-- Preview ALWAYS last -->
     <div class="preview">
-      <h2 style="margin: 0 0 10px;">Preview</h2>
-      <iframe src="LukeHuangResume.pdf" title="Luke Huang Resume PDF"></iframe>
+      <h2>Preview</h2>
+
+      <!-- PDF.js will render all pages into this container -->
+      <div id="pdfjs-preview" class="pdfjs"></div>
+
+      <!-- Fallback if JS disabled -->
+      <noscript>
+        <p style="color:#555;">
+          Preview requires JavaScript. Use “View Resume (PDF)” above.
+        </p>
+      </noscript>
     </div>
   </div>
+
+  <!-- PDF.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.min.js"></script>
+  <script>
+    (async function () {
+      const url = "LukeHuangResume.pdf";
+      const container = document.getElementById("pdfjs-preview");
+
+      // Worker must match the same version
+      pdfjsLib.GlobalWorkerOptions.workerSrc =
+        "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.worker.min.js";
+
+      const pdf = await pdfjsLib.getDocument(url).promise;
+
+      // Fit width nicely on mobile/desktop
+      const maxWidth = Math.min(container.clientWidth || 360, 860);
+
+      for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+        const page = await pdf.getPage(pageNum);
+
+        // Calculate a scale so the page fits container width
+        const viewport = page.getViewport({ scale: 1 });
+        const scale = maxWidth / viewport.width;
+        const scaledViewport = page.getViewport({ scale });
+
+        const canvas = document.createElement("canvas");
+        const ctx = canvas.getContext("2d");
+
+        canvas.width = Math.floor(scaledViewport.width);
+        canvas.height = Math.floor(scaledViewport.height);
+
+        container.appendChild(canvas);
+
+        await page.render({ canvasContext: ctx, viewport: scaledViewport }).promise;
+      }
+    })().catch(err => {
+      console.error(err);
+      const el = document.getElementById("pdfjs-preview");
+      if (el) {
+        el.innerHTML = '<p style="color:#555;">Preview failed to load. Use “View Resume (PDF)” above.</p>';
+      }
+    });
+  </script>
 </body>
 </html>
