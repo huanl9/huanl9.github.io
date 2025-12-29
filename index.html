@@ -4,68 +4,216 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Luke Huang</title>
-  <style>
-    body {
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      max-width: 860px;
-      margin: 40px auto;
-      padding: 0 16px;
-      line-height: 1.55;
-    }
-    h1 { margin: 0 0 6px; }
-    .sub { color: #444; margin: 0 0 14px; }
+  <meta name="description" content="Luke Huang — New Grad Data Analyst in Toronto. Python/R/SQL, automation, and dashboards." />
 
-    .btns a {
-      display: inline-block;
-      margin: 10px 10px 0 0;
-      padding: 10px 14px;
-      border: 1px solid #111;
-      border-radius: 10px;
-      text-decoration: none;
-      color: #111;
-    }
-    .btns a:hover { opacity: 0.82; }
+  <!-- Open Graph (nice when sharing links) -->
+  <meta property="og:title" content="Luke Huang" />
+  <meta property="og:description" content="New Grad Data Analyst • Toronto, ON — Python/R/SQL • Automation • Dashboards" />
+  <meta property="og:type" content="website" />
 
-    .card {
-      margin-top: 18px;
-      padding: 16px;
-      border: 1px solid #ddd;
-      border-radius: 14px;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <h1>Luke Huang</h1>
-  <p class="sub">New Grad Data Analyst • Toronto, ON</p>
+  <a class="skip" href="#main">Skip to content</a>
 
-  <div class="btns">
-    <a href="LukeHuangResume.pdf" target="_blank" rel="noopener noreferrer">View Resume (PDF)</a>
-    <a href="LukeHuangResume.pdf" download>Download Resume</a>
-    <a href="https://www.linkedin.com/in/lukeziyuanhuang/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    <a href="https://github.com/huanl9" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <a href="mailto:lukehuang526@gmail.com">Email</a>
-  </div>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__name">Luke Huang</span>
+      </div>
 
-  <div class="card">
-    <h2>About</h2>
-    <p>
-      Data Analyst with a foundation in mathematics, computer science, and statistical modeling.
-      Experienced with Python/R/SQL, data cleaning, web scraping & automation, and building visualizations.
-    </p>
+      <nav class="nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-    <h2>Highlights</h2>
-    <ul>
-      <li>Math and Computer Science major</li>
-      <li>Python (Selenium), R, SQL, Excel</li>
-      <li>Power BI / Tableau</li>
-      <li>
-        Project:
-        <a href="https://github.com/huanl9/Multi_brand_filter_scraper" target="_blank" rel="noopener noreferrer">
-          Multi-brand filter scraper
-        </a>
-      </li>
-    </ul>
-  </div>
+      <button class="themeBtn" id="themeBtn" type="button" aria-label="Toggle dark mode">
+        <span id="themeIcon" aria-hidden="true">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__text">
+        <h1>Luke Huang</h1>
+        <p class="sub">New Grad Data Analyst • Toronto, ON</p>
+        <p class="lead">
+          I build clean datasets, automate repetitive work, and turn data into simple dashboards & insights.
+        </p>
+
+        <div class="btnRow" role="list" aria-label="Quick links">
+          <a class="btn" role="listitem" href="LukeHuangResume.pdf" target="_blank" rel="noopener noreferrer">
+            View Resume (PDF)
+          </a>
+          <a class="btn btn--ghost" role="listitem" href="LukeHuangResume.pdf" download>
+            Download
+          </a>
+          <a class="btn btn--ghost" role="listitem" href="https://www.linkedin.com/in/lukeziyuanhuang/" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+          <a class="btn btn--ghost" role="listitem" href="https://github.com/huanl9" target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+          <a class="btn btn--ghost" role="listitem" href="mailto:lukehuang526@gmail.com">
+            Email
+          </a>
+        </div>
+
+        <div class="chips" aria-label="Key tools">
+          <span class="chip">Python</span>
+          <span class="chip">R</span>
+          <span class="chip">SQL</span>
+          <span class="chip">Excel</span>
+          <span class="chip">Power BI</span>
+          <span class="chip">Tableau</span>
+        </div>
+      </div>
+
+      <aside class="hero__card" aria-label="Quick summary">
+        <h2 class="cardTitle">Quick Summary</h2>
+        <ul class="cleanList">
+          <li>📌 Math & Computer Science background</li>
+          <li>🧹 Data cleaning + wrangling</li>
+          <li>🤖 Web scraping + automation (Selenium)</li>
+          <li>📊 Dashboards + reporting</li>
+        </ul>
+      </aside>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="sectionHead">
+        <h2>About</h2>
+        <p class="muted">Short and simple.</p>
+      </div>
+
+      <div class="card">
+        <p>
+          I’m a new grad data analyst with experience using <strong>Python/R/SQL</strong> to collect, clean,
+          and analyze data. I like building reliable pipelines and clear visualizations that help people make decisions.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="sectionHead">
+        <h2>Projects</h2>
+        <p class="muted">A few things I’ve built.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card project">
+          <div class="project__top">
+            <h3>Multi-brand filter scraper</h3>
+            <span class="tag">Python • Selenium</span>
+          </div>
+          <p class="muted">
+            Scrapes product/filter data across brands and organizes it into a consistent format for analysis.
+          </p>
+          <div class="project__links">
+            <a class="link" href="https://github.com/huanl9/Multi_brand_filter_scraper" target="_blank" rel="noopener noreferrer">
+              View repo →
+            </a>
+          </div>
+        </article>
+
+        <!-- Duplicate this card for more projects -->
+        <article class="card project">
+          <div class="project__top">
+            <h3>Dashboard / BI project</h3>
+            <span class="tag">Power BI / Tableau</span>
+          </div>
+          <p class="muted">
+            A clean dashboard summarizing key metrics (swap this text with your real project).
+          </p>
+          <div class="project__links">
+            <a class="link" href="https://github.com/huanl9" target="_blank" rel="noopener noreferrer">
+              Add link →
+            </a>
+          </div>
+        </article>
+
+        <article class="card project">
+          <div class="project__top">
+            <h3>SQL analysis project</h3>
+            <span class="tag">SQL • Reporting</span>
+          </div>
+          <p class="muted">
+            Queries + reporting workflow for answering business questions (replace with your real project).
+          </p>
+          <div class="project__links">
+            <a class="link" href="https://github.com/huanl9" target="_blank" rel="noopener noreferrer">
+              Add link →
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="sectionHead">
+        <h2>Skills</h2>
+        <p class="muted">What I use most.</p>
+      </div>
+
+      <div class="grid grid--2">
+        <div class="card">
+          <h3>Technical</h3>
+          <ul class="cleanList">
+            <li>Python (Selenium), R</li>
+            <li>SQL, Excel</li>
+            <li>Data cleaning, automation</li>
+            <li>Basic statistics & modeling</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Visualization</h3>
+          <ul class="cleanList">
+            <li>Power BI / Tableau</li>
+            <li>Charts that tell a story</li>
+            <li>Clear metric definitions</li>
+            <li>Simple, readable layouts</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="sectionHead">
+        <h2>Contact</h2>
+        <p class="muted">Fastest way to reach me.</p>
+      </div>
+
+      <div class="card contact">
+        <p class="muted">Email:</p>
+        <p class="contact__big">
+          <a href="mailto:lukehuang526@gmail.com">lukehuang526@gmail.com</a>
+        </p>
+
+        <div class="btnRow">
+          <a class="btn" href="mailto:lukehuang526@gmail.com">Send Email</a>
+          <a class="btn btn--ghost" href="LukeHuangResume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="muted">
+        © <span id="year"></span> Luke Huang • Built with plain HTML/CSS/JS
+      </p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
