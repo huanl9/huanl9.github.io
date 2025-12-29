@@ -96,7 +96,7 @@ function renderQr() {
       const h = c.height;
   
       // Watermark box size (keep it modest for scannability)
-      const box = Math.round(w * 0.26); // ~26% of width
+      const box = Math.round(w * 0.22); // ~26% of width
       const x = Math.round((w - box) / 2);
       const y = Math.round((h - box) / 2);
       const radius = Math.round(box * 0.18);
