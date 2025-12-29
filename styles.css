@@ -279,16 +279,16 @@ h1{
 }
 
 #qrcode{
-  width: 160px;
-  height: 160px;
+  width: 220px;
+  height: 220px;
   display: grid;
   place-items: center;
 }
 
 #qrcode img,
 #qrcode canvas{
-  width: 160px !important;
-  height: 160px !important;
+  width: 220px !important;
+  height: 220px !important;
   display: block;
 }
 
