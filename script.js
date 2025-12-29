@@ -22,7 +22,9 @@
     if (saved === "light" || saved === "dark") return setTheme(saved);
     setTheme(systemPrefersLight() ? "light" : "dark");
   }
-
+  function getSiteUrlForQr() {
+  return "https://huanl9.github.io/";
+  }
   initTheme();
 
   if (btn) {
