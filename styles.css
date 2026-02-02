@@ -23,6 +23,12 @@
   --shadow: 0 16px 40px rgba(17,24,39,.12);
 }
 
+.topbarActions{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 *{ box-sizing: border-box; }
 html{ scroll-behavior: smooth; }
 body{
